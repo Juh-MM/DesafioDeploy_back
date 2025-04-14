@@ -6,6 +6,11 @@ const complaintsRoute = require('./routes/complaints'); // ou o caminho certo
 const app = express();
 app.use(express.json());
 
+const cors = require('cors');
+app.use(cors({
+  origin: 'https://desafiodeploy.netlify.app/',
+}));
+
 const port = process.env.PORT || 3000;
 
 mongoose.connect(process.env.MONGODB_URI)
