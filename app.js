@@ -8,7 +8,7 @@ app.use(express.json());
 
 const cors = require('cors');
 app.use(cors({
-  origin: 'https://desafiodeploy.netlify.app/',
+  origin: 'https://desafiodeploy.netlify.app',
 }));
 
 const port = process.env.PORT || 3000;
